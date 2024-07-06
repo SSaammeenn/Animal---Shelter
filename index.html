@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Shelter Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff; /* Light blue background color */
+            font-family: 'Poppins', sans-serif; /* Elegant font */
+        }
+        .hero-section {
+            background-image: url('data:image/jpeg;base64,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'); /* High-resolution background image URL */
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+        .card-hover img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-hover:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center text-white">
+        <div class="text-center bg-gray-900 bg-opacity-50 p-8 rounded-lg">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Our Animal Shelter</h1>
+            <p class="text-xl mb-6">Find your new best friend today</p>
+            <button class="bg-green-500 px-6 py-2 rounded-lg text-white hover:bg-green-700">Adopt Now</button>
+        </div>
+    </section>
+
+    <!-- Animals Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12">Our Animals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Animal Card 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform card-hover">
+                    <img src="data:image/jpeg;base64,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" alt="Dog" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Buddy</h3>
+                    <p class="text-gray-600 mb-4">A friendly and playful dog looking for a loving home.</p>
+                    <button class="bg-green-500 px-4 py-2 rounded-lg text-white hover:bg-green-700">Adopt Now</button>
+                </div>
+                <!-- Animal Card 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform card-hover">
+                    <img src="https://i.pinimg.com/736x/ec/bc/49/ecbc49a1bc39c351299289978dd33e20.jpg" alt="Cat" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Whiskers</h3>
+                    <p class="text-gray-600 mb-4">A gentle and affectionate cat in need of a forever home.</p>
+                    <button class="bg-green-500 px-4 py-2 rounded-lg text-white hover:bg-green-700">Adopt Now</button>
+                </div>
+                <!-- Animal Card 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform card-hover">
+                    <img src="https://i.pinimg.com/originals/5a/c7/39/5ac73941d71d9e4317408a256053cd8c.jpg" alt="Rabbit" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Thumper</h3>
+                    <p class="text-gray-600 mb-4">A cute and cuddly rabbit looking for a new family.</p>
+                    <button class="bg-green-500 px-4 py-2 rounded-lg text-white hover:bg-green-700">Adopt Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12">Happy Tails</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIV99IJOGUBMQBy9kccOQsAyq36yzt0BRYUw&s" alt="Owner and Pet" class="w-24 h-24 object-cover rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">John & Max</h3>
+                    <p class="text-gray-600">"Adopting Max was the best decision we ever made. He's brought so much joy to our home."</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAoyyLacKElsxYkU8lXXPAqINyXVaGdmmYBw&s" alt="Owner and Pet" class="w-24 h-24 object-cover rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Sarah & Bella</h3>
+                    <p class="text-gray-600">"Bella is the sweetest cat ever. We love her so much and can't imagine life without her."</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToV3xQLSUkSwmyNtkTx41cPzs9TYx3irjLFQ&s" alt="Owner and Pet" class="w-24 h-24 object-cover rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Emily & Cocoa</h3>
+                    <p class="text-gray-600">"Cocoa is such a joy to have around. We are so grateful for the shelter's help in finding her."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-12">Get in Touch</h2>
+            <form class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Your Message" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                </div>
+                <button type="submit" class="bg-green-500 px-6 py-2 rounded-lg text-white hover:bg-green-700">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <p>&copy; 2024 Animal Shelter. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-green-400 mx-2 hover:text-green-600"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-green-400 mx-2 hover:text-green-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-green-400 mx-2 hover:text-green-600"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-hover');
+
+            cards.forEach(card => {
+                card.addEventListener('mouseover', () => {
+                    card.classList.add('animate__animated', 'animate__pulse');
+                });
+
+                card.addEventListener('mouseout', () => {
+                    card.classList.remove('animate__animated', 'animate__pulse');
+                });
+            });
+        });
+    </script>
+</body>
